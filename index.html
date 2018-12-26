@@ -4,21 +4,23 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello Bulma!</title>
+  <title>Panti Asuhan Islam</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
-  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/css/swiper.min.css">
+  <link rel="stylesheet" href="index.css">
 </head>
 
 <body class="has-navbar-fixed-top">
   <nav class="navbar is-fixed-top is-primary" role="navigation" aria-label="main navigation">
+    <div class="container">
     <div class="navbar-brand">
       <div class="navbar-item">
-        <a class="icon is-large has-text-warning" href="/">
+        <a class="icon is-medium has-text-warning" href="/">
           <i class="fas fa-2x fa-smile"></i>
         </a>
       </div>
 
-      <div class="navbar-item is-size-3">PAI</div>
+      <div class="navbar-item is-size-4">PAI</div>
 
       <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarItem">
         <span aria-hidden="true"></span>
@@ -46,20 +48,32 @@
         </a>
       </div>
     </div>
+  </div>
   </nav>
-  <section class="hero is-info is-medium is-bold">
-    <div class="hero-body">
-      <div class="container">
-        <h1 class="title">
-          Primary title
-        </h1>
-        <h2 class="subtitle">
-          Primary subtitle
-        </h2>
+  <section id="hero-section">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="hero-item" style="background-image:url('Images/adorable-babies-boys-1212805.jpg')"></div>
+        </div>
+        <div class="swiper-slide">
+          <div class="hero-item" style="background-image:url('Images/adorable-childhood-children-754769.jpg')"></div>
+        </div>
+        <div class="swiper-slide">
+          <div class="hero-item" style="background-image:url('Images/beach-boys-children-939702.jpg')"></div>
+        </div>
+        <div class="swiper-slide">
+          <div class="hero-item" style="background-image:url('Images/boy-chair-children-1001914.jpg')"></div>
+        </div>
       </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+      <!-- Add Arrows -->
+      <!-- <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div> -->
     </div>
   </section>
-  <section class="section">
+  <section id="main-section" class="section">
     <div class="container">
       <div class="columns">
         <div class="column is-3">
@@ -92,8 +106,8 @@
             </div>
           </div>
         </div>
-        <div class="column">
-          <div class="card">
+        <div id="feed-container" class="column">
+          <div class="card feed-item">
             <header class="card-header">
               <p class="card-header-title">
                 Component
@@ -118,7 +132,7 @@
               <a href="#" class="card-footer-item">Delete</a>
             </footer>
           </div>
-          <div class="card">
+          <div class="card feed-item">
             <header class="card-header">
               <p class="card-header-title">
                 Component
@@ -143,7 +157,7 @@
               <a href="#" class="card-footer-item">Delete</a>
             </footer>
           </div>
-          <div class="card">
+          <div class="card feed-item">
             <header class="card-header">
               <p class="card-header-title">
                 Component
@@ -168,7 +182,7 @@
               <a href="#" class="card-footer-item">Delete</a>
             </footer>
           </div>
-          <div class="card">
+          <div class="card feed-item">
             <header class="card-header">
               <p class="card-header-title">
                 Component
@@ -222,6 +236,9 @@
       </div>
     </div>
   </section>
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.min.js"></script>
+  <script src="index.js"></script>
 </body>
 
 </html>
