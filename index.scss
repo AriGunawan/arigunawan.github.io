@@ -41,9 +41,49 @@
 }
 
 #main-section {
+  #im-panel {
+    .panel-heading {
+      padding: 1.5em 1.5em 1em 1.5em;
+    }
+    .panel-block {
+      padding: 1.5em;
+    }
+  }
   #feed-container {
     .feed-item {
       margin-bottom: 15px;
+
+      .card-content {
+        .column {
+          padding-top: 0px;
+          padding-bottom: 0px;
+        }
+        .content-info {
+          margin-top: 15px;
+        }
+      }
+    }
+    .feed-title {
+      margin-bottom: 5px;
+    }
+  }
+  .card-footer {
+    .share-buttons {
+      justify-content: flex-end;
+      .field {
+        margin-bottom: 0;
+        margin-left: 15px;
+        .fb-share-button {
+          background-color: #3b5998;
+          border-color: #3b5998;
+          color: #fff;
+        }
+        .tt-share-button {
+          background-color: #38A1F3;
+          border-color: #38A1F3;
+          color: #fff;
+        }
+      }
     }
   }
 }
