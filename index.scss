@@ -50,8 +50,16 @@
     }
   }
   #feed-container {
+    .filter-container {
+      margin-bottom: 1.5rem;
+
+      .columns {
+        width: 100%;
+      }
+    }
+
     .feed-item {
-      margin-bottom: 15px;
+      margin-bottom: 1.5rem;
 
       .card-content {
         .column {
@@ -65,6 +73,11 @@
     }
     .feed-title {
       margin-bottom: 5px;
+    }
+  }
+  #right-container {
+    .card {
+      margin-bottom: 1.5rem;
     }
   }
   .card-footer {

@@ -48,8 +48,16 @@
   padding: 1.5em;
 }
 
+#main-section #feed-container .filter-container {
+  margin-bottom: 1.5rem;
+}
+
+#main-section #feed-container .filter-container .columns {
+  width: 100%;
+}
+
 #main-section #feed-container .feed-item {
-  margin-bottom: 15px;
+  margin-bottom: 1.5rem;
 }
 
 #main-section #feed-container .feed-item .card-content .column {
@@ -63,6 +71,10 @@
 
 #main-section #feed-container .feed-title {
   margin-bottom: 5px;
+}
+
+#main-section #right-container .card {
+  margin-bottom: 1.5rem;
 }
 
 #main-section .card-footer .share-buttons {
