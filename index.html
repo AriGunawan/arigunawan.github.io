@@ -95,23 +95,19 @@
             </div>
             <div class="panel-block">
               <div class="content">
-                <b>[1.Penjelasan singkat mengenai site ini]</b> Lorem ipsum dolor sit amet, consectetur adipiscing
-                elit.
-                Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-                <a href="#">#css</a> <a href="#">#responsive</a>
-                <br>
-                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                Sebuah project yang diharapkan dapat memberikan manfaat bagi sebanyak-banyak muslim. Berisi mengenai info-info bermanfaat bagi para muslim seperti info kajian yang tersebar di Bandung dan sekitarnya. Semoga seluruh info yang disampaikan bermanfaat bagi kita semua dan menjadi amal sholeh pemberat timbangan kebaikan di yaumil hisab.
               </div>
             </div>
           </div>
           <div class="card">
             <header class="card-header">
               <p class="card-header-title">
-                <b>[2.Judul untuk ajakan share info]</b>
+                <b>Share info kajian yuk! :)</b>
               </p>
             </header>
             <div class="card-content">
-              <b>[3.Ajakan untuk share info]</b>
+              <p>Bagi sahabat yang memiliki info kajian muslim dimanapun berada, boleh kontak kami via email atau WhatsApp</p>
+              <p>Terima Kasih. Jazaakumullahu Khairan Katsiran</p>
             </div>
           </div>
         </div>
@@ -178,93 +174,90 @@
               </button>
             </div>
           </div>
-          <div class="card feed-item">
-            <header class="card-header">
-              <article class="media card-header-title has-text-weight-light">
-                <!-- <figure class="media-left">
-                  <p class="image is-96x96">
-                    <img src="https://bulma.io/images/placeholders/128x128.png">
-                  </p>
-                </figure> -->
-                <div class="media-content">
-                  <div class="content">
-                    <div>
-                      <span>RIGHOD</span> - <span>Masjid Baiturrahmaan</span> - <small>Margahayu Selatan</small>
-                    </div>
-                    <div class="is-size-5 has-text-weight-semibold feed-title">
-                      <span>Muda Mulia Dirindu Surga</span>&nbsp;<span>(Ust. Fatih Karim)</span>
-                    </div>
-                    <div>
-                      <span class="tag is-info">Kajian</span>
-                      <span class="tag is-info">Rutin</span>
-                      <span class="tag is-info">Umum</span>
+          <template v-for="item in feeds">
+            <div class="card feed-item">
+              <header class="card-header">
+                <article class="media card-header-title has-text-weight-light">
+                  <div class="media-content">
+                    <div class="content">
+                      <div>
+                        <span>{{item.Organizer.ShortName}}</span> - <span>{{item.Place.Name}}</span> - <small>{{item.Place.Location}}</small>
+                      </div>
+                      <div class="is-size-5 has-text-weight-semibold feed-title">
+                        <span>{{item.Title}}</span>&nbsp;<span>({{item.NewsSpeakers}})</span>
+                      </div>
+                      <div>
+                        <span class="tag is-info">Kajian</span>
+                        <span class="tag is-info">Rutin</span>
+                        <span class="tag is-info">Umum</span>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </article>
-            </header>
-            <div class="card-content">
-              <div>
+                </article>
+              </header>
+              <div class="card-content">
                 <div>
-                  <img src="Images/poster.jpg">
-                </div>
-                <div class="content-info">
-                  <div class="columns">
-                    <div class="column is-one-quarter has-text-right-desktop has-text-weight-semibold">Tema</div>
-                    <div class="column">Muda Mulia Dirindu Surga</div>
+                  <div>
+                    <img :src="item.PosterUrl">
                   </div>
-                  <div class="columns">
-                    <div class="column is-one-quarter has-text-right-desktop has-text-weight-semibold">Narasumber</div>
-                    <div class="column">Ust. Fatih Karim</div>
-                  </div>
-                  <div class="columns">
-                    <div class="column is-one-quarter has-text-right-desktop has-text-weight-semibold">Tanggal</div>
-                    <div class="column">1 Jan 2019</div>
-                  </div>
-                  <div class="columns">
-                    <div class="column is-one-quarter has-text-right-desktop has-text-weight-semibold">Waktu</div>
-                    <div class="column">Bada Maghrib - Selesai</div>
-                  </div>
-                  <div class="columns">
-                    <div class="column is-one-quarter has-text-right-desktop has-text-weight-semibold">Tempat</div>
-                    <div class="column">Masjid Baiturrahmaan - Margahayu Selatan (https://goo.gl/234wer2)</div>
+                  <div class="content-info">
+                    <div class="columns">
+                      <div class="column is-one-quarter has-text-right-desktop has-text-weight-semibold">Tema</div>
+                      <div class="column">{{item.Title}}</div>
+                    </div>
+                    <div class="columns">
+                      <div class="column is-one-quarter has-text-right-desktop has-text-weight-semibold">Narasumber</div>
+                      <div class="column">{{item.NewsSpeakers}}</div>
+                    </div>
+                    <div class="columns">
+                      <div class="column is-one-quarter has-text-right-desktop has-text-weight-semibold">Tanggal</div>
+                      <div class="column">{{item.StartDateTime}}</div>
+                    </div>
+                    <div class="columns">
+                      <div class="column is-one-quarter has-text-right-desktop has-text-weight-semibold">Waktu</div>
+                      <div class="column">{{item.EndDateTime}}</div>
+                    </div>
+                    <div class="columns">
+                      <div class="column is-one-quarter has-text-right-desktop has-text-weight-semibold">Tempat</div>
+                      <div class="column">{{item.Place.Name}} - {{item.Place.Location}} ({{item.Place.MapLocationUrl}})</div>
+                    </div>
                   </div>
                 </div>
               </div>
+              <footer class="card-footer">
+                <div class="card-footer-item share-buttons">
+                  <div class="field has-addons">
+                    <p class="control">
+                      <a class="button is-static is-small">
+                        <span class="icon is-small">
+                          <i class="fab fa-twitter"></i>
+                        </span>
+                      </a>
+                    </p>
+                    <p class="control">
+                      <a class="button tt-share-button is-small">
+                        <span>Tweet</span>
+                      </a>
+                    </p>
+                  </div>
+                  <div class="field has-addons">
+                    <p class="control">
+                      <a class="button is-static is-small">
+                        <span class="icon is-small">
+                          <i class="fab fa-facebook-f"></i>
+                        </span>
+                      </a>
+                    </p>
+                    <p class="control">
+                      <a class="button fb-share-button is-small">
+                        <span>Share</span>
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </footer>
             </div>
-            <footer class="card-footer">
-              <div class="card-footer-item share-buttons">
-                <div class="field has-addons">
-                  <p class="control">
-                    <a class="button is-static is-small">
-                      <span class="icon is-small">
-                        <i class="fab fa-twitter"></i>
-                      </span>
-                    </a>
-                  </p>
-                  <p class="control">
-                    <a class="button tt-share-button is-small">
-                      <span>Tweet</span>
-                    </a>
-                  </p>
-                </div>
-                <div class="field has-addons">
-                  <p class="control">
-                    <a class="button is-static is-small">
-                      <span class="icon is-small">
-                        <i class="fab fa-facebook-f"></i>
-                      </span>
-                    </a>
-                  </p>
-                  <p class="control">
-                    <a class="button fb-share-button is-small">
-                      <span>Share</span>
-                    </a>
-                  </p>
-                </div>
-              </div>
-            </footer>
-          </div>
+          </template>
         </div>
         <div id="right-container" class="column is-3">
           <div class="card">
@@ -318,11 +311,12 @@
           <div class="card">
             <header class="card-header">
               <p class="card-header-title">
-                <b>[4.Judul untuk ajakan memberi feedback]</b>
+                <b>Kami masih seumur jagung...</b>
               </p>
             </header>
             <div class="card-content">
-              <b>[5.Ajakan untuk memberi feedback]</b>
+              <p>Ditunggu saran dan kritikmu yang membangun untuk kebaikan dan manfaat yang lebih luas</p>
+              <p>Terima Kasih. Jazaakumullahu Khairan Katsiran :)</p>
             </div>
           </div>
           <div class="card">
@@ -341,6 +335,7 @@
   </section>
   <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.22/dist/vue.js"></script>
   <script src="index.js"></script>
 </body>
 
