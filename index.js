@@ -6,7 +6,7 @@ var mockFeeds = [
     ShortDescription: '',
     StartDateTime: '09.00',
     EndDateTime: '10.00',
-    PosterUrl: 'images/uas.jpg',
+    PosterUrl: 'Images/uas.jpg',
     NewsSpeakers: 'UAS',
     Organizer: {
       Id: '82e4080a-f03e-42c6-a854-753b8c18f09f',
@@ -35,7 +35,7 @@ var mockFeeds = [
     ShortDescription: '',
     StartDateTime: '15.30',
     EndDateTime: 'Selesai',
-    PosterUrl: 'images/salim.jpg',
+    PosterUrl: 'Images/salim.jpg',
     NewsSpeakers: 'Salim A Fillah',
     Organizer: {
       Id: '82e4080a-f03e-42c6-a854-753b8c18f09f',
@@ -64,7 +64,7 @@ var mockFeeds = [
     ShortDescription: '',
     StartDateTime: '13.00',
     EndDateTime: 'Selesai',
-    PosterUrl: 'images/abe.jpg',
+    PosterUrl: 'Images/abe.jpg',
     NewsSpeakers: 'ABE',
     Organizer: {
       Id: '82e4080a-f03e-42c6-a854-753b8c18f09f',
